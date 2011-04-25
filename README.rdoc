@@ -3,14 +3,14 @@
 Create some Storefront, Business and Location objects
 
 == Geo-spatial search:
-{{{
-irb> StoreFront.near(:location => Geocoder.search("New York").first.coordinates)
-{{{
+```ruby
+StoreFront.near(:location => Geocoder.search("New York").first.coordinates)
+```
 
 == Geo-spatial relational search
 
-{{{
+```ruby
 irb> Location.near(:coordinates => Geocoder.search("New York").first.coordinates).first.businesses
 
 irb> Location.near(:coordinates => Geocoder.search("New York").first.coordinates).collect(&:businesses)
-}}}
+```
