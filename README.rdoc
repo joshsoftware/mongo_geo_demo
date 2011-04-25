@@ -1,9 +1,9 @@
-# Demo steps
+= Demo steps
 
-## Geo-spatial search:
+== Geo-spatial search:
 irb> StoreFront.near(:location => Geocoder.search("New York").first.coordinates)
 
-## Geo-spatial relational search
+== Geo-spatial relational search
 
 irb> Location.near(:coordinates => Geocoder.search("New York").first.coordinates).first.businesses
 irb> Location.near(:coordinates => Geocoder.search("New York").first.coordinates).collect(&:businesses)
