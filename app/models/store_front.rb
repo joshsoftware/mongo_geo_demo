@@ -4,7 +4,7 @@ class StoreFront
   field :name
   field :domain
   field :address
-  field :location, type => Array
+  field :location, :type => Array
   
   index [[ :location, Mongo::GEO2D ]]
 
